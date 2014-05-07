@@ -1,0 +1,13 @@
+.hero {
+    display: block;
+}
+
+.navigation .nav li.active a, .navigation, .navigation .nav .active > a:focus {
+    background: none;
+    box-shadow: 0 0;
+    color: #999;
+}
+
+.nav li.active > a:hover {
+    color: #fff;
+}
