@@ -54,11 +54,11 @@ jQuery.easing.def = "easeOutBack";
 
   (function() {
 
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 
   })();
 
@@ -76,62 +76,62 @@ jQuery.easing.def = "easeOutBack";
 
 <div id="bg-top">
 
-    <div id="bg-btm">
+	<div id="bg-btm">
 
-        <div id="wrapper" class="hfeed">
+		<div id="wrapper" class="hfeed">
 
-        <div id="wrapper-btm">
+		<div id="wrapper-btm">
 
-            <div id="header">
+			<div id="header">
 
-                <div id="masthead">
+				<div id="masthead">
 
-                   
+				   
 
-                    <div id="branding" role="banner" style=" display:none">
+					<div id="branding" role="banner" style=" display:none">
 
-                        
-                        <div id="site-title">
+						
+						<div id="site-title">
 
-                            <span>
+							<span>
 
-                                <a href="../../../www.kaylog.com/default.htm" title="kaylog" rel="home">kaylog</a>
+								<a href="../../../www.kaylog.com/default.htm" title="kaylog" rel="home">kaylog</a>
 
-                            </span>
+							</span>
 
-                        </div>
+						</div>
 
-                        <div id="site-description">Just another WordPress site</div>
+						<div id="site-description">Just another WordPress site</div>
 
-        
+		
 
-                       
+					   
 
-                    </div><!-- #branding -->
+					</div><!-- #branding -->
 
-        
+		
 
-                    <div id="access" role="navigation">
+					<div id="access" role="navigation">
 
-                      
-                        <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+					  
+						<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
 
-                        
-                       
+						
+					   
 
-                        <div class="nav">
+						<div class="nav">
 
-                        	<div class="nav-content">
+							<div class="nav-content">
 
-                                <div class="current-band"></div>
+								<div class="current-band"></div>
 
-                                <div class="menu"><ul><li ><a href="../../../www.kaylog.com/default.htm" title="Home">Home</a></li><li class="page_item page-item-2"><a href="../../../www.kaylog.com/about/default.htm">About</a></li><li class="page_item page-item-4"><a href="../../../www.kaylog.com/test/default.htm">Archives</a></li><li class="page_item page-item-20"><a href="../../../www.kaylog.com/contact/default.htm">Contact</a></li><li class="page_item page-item-22"><a href="../../../www.kaylog.com/links/default.htm">Links</a></li></ul></div>
+								<div class="menu"><ul><li ><a href="../../../www.kaylog.com/default.htm" title="Home">Home</a></li><li class="page_item page-item-2"><a href="../../../www.kaylog.com/about/default.htm">About</a></li><li class="page_item page-item-4"><a href="../../../www.kaylog.com/test/default.htm">Archives</a></li><li class="page_item page-item-20"><a href="../../../www.kaylog.com/contact/default.htm">Contact</a></li><li class="page_item page-item-22"><a href="../../../www.kaylog.com/links/default.htm">Links</a></li></ul></div>
 
-                                    	<form method="get" id="searchform" action="http://www.kaylog.com/">
+										<form method="get" id="searchform" action="http://www.kaylog.com/">
 		<div><label for="s" class="assistive-text"></label>
 		<input type="text" class="field" name="s" id="s" placeholder="Search" />
 		<input type="submit" class="submit" name="submit" id="searchsubmit" value="" />
-        </div>
+		</div>
 	</form>
    
 <!--
@@ -142,33 +142,33 @@ jQuery.easing.def = "easeOutBack";
 	</div>
 	</form>
   -->   
-                            </div><!--nav-content -->
+							</div><!--nav-content -->
 
-                        </div><!-- nav -->
+						</div><!-- nav -->
 
-                        <div id="logo-kaylog">
+						<div id="logo-kaylog">
 
-                        	<div class="kaylog">
+							<div class="kaylog">
 
-                                <div class="bug"></div>
+								<div class="bug"></div>
 
-                                <div class="sun"></div>
+								<div class="sun"></div>
 
-                                <img src="../../../www.kaylog.com/wp-content/themes/theme-bugspaces/images/logo-kaylog.png" width="117" height="49" alt="kaylog">
+								<img src="../../../www.kaylog.com/wp-content/themes/theme-bugspaces/images/logo-kaylog.png" width="117" height="49" alt="kaylog">
 
-                            </div><!--bugspaces -->
+							</div><!--bugspaces -->
 
-                  		</div><!--logo-bugspaces-->
+						</div><!--logo-bugspaces-->
 
-                    </div><!-- #access -->
+					</div><!-- #access -->
 
-                </div><!-- #masthead -->
+				</div><!-- #masthead -->
 
-            </div><!-- #header -->
+			</div><!-- #header -->
 
-        
+		
 
-            <div id="main">
+			<div id="main">
 
 
 	<div id="container">
@@ -188,33 +188,33 @@ jQuery.easing.def = "easeOutBack";
 		document.getElementById('s') && document.getElementById('s').focus();
 	</script>
 
-            </div><!-- #main -->
-        
-            <div id="footer" role="contentinfo"  >
-            	<div class="footer-content">
-                <div id="colophon">
-        
-        
-        
-                    <div id="site-info">
-                        <div>
-                        &copy;2012 <a href="../../../www.kaylog.com/default.htm" title="kaylog" rel="home">
-                            kaylog                        </a> 
-                       	</div>
-        				<div class="menu"><ul><li ><a href="../../../www.kaylog.com/default.htm" title="Home">Home</a></li><li class="page_item page-item-2"><a href="../../../www.kaylog.com/about/default.htm">About</a></li><li class="page_item page-item-4"><a href="../../../www.kaylog.com/test/default.htm">Archives</a></li><li class="page_item page-item-20"><a href="../../../www.kaylog.com/contact/default.htm">Contact</a></li><li class="page_item page-item-22"><a href="../../../www.kaylog.com/links/default.htm">Links</a></li></ul></div>
-                        
-                    </div><!-- #site-info -->
-                   
-        
-                </div><!-- #colophon --> 
-                <div id="moon" class="moon"></div>
-                </div><!-- #footer-content -->
-            </div><!-- #footer -->
-        </div>
-       
-        </div><!-- #wrapper -->
-        
-        	</div><!-- #bg-btm -->
+			</div><!-- #main -->
+		
+			<div id="footer" role="contentinfo"  >
+				<div class="footer-content">
+				<div id="colophon">
+		
+		
+		
+					<div id="site-info">
+						<div>
+						&copy;2012 <a href="../../../www.kaylog.com/default.htm" title="kaylog" rel="home">
+							kaylog                        </a> 
+						</div>
+						<div class="menu"><ul><li ><a href="../../../www.kaylog.com/default.htm" title="Home">Home</a></li><li class="page_item page-item-2"><a href="../../../www.kaylog.com/about/default.htm">About</a></li><li class="page_item page-item-4"><a href="../../../www.kaylog.com/test/default.htm">Archives</a></li><li class="page_item page-item-20"><a href="../../../www.kaylog.com/contact/default.htm">Contact</a></li><li class="page_item page-item-22"><a href="../../../www.kaylog.com/links/default.htm">Links</a></li></ul></div>
+						
+					</div><!-- #site-info -->
+				   
+		
+				</div><!-- #colophon --> 
+				<div id="moon" class="moon"></div>
+				</div><!-- #footer-content -->
+			</div><!-- #footer -->
+		</div>
+	   
+		</div><!-- #wrapper -->
+		
+			</div><!-- #bg-btm -->
 </div><!-- #bg-top -->
 </body>
 </html>
