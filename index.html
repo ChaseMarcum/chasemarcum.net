@@ -63,6 +63,12 @@
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css" media="screen">
     <link href="css/style.min.css" rel="stylesheet">
     <link href="css/dark.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/shCore.js"></script>
+	<script type="text/javascript" src="js/shBrushJava.js"></script>
+	<script type="text/javascript" src="js/shBrushJavaFX.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
@@ -607,6 +613,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="span4">
                     <h3>Social Photo Collage</h3>
                 </div>
@@ -631,6 +638,7 @@
                                 <h5>Description</h5>
                                 <p>Social Photo Collage accesses your My Pictures photo library and sorts the photos by their date created and displays them in sections organized by month. You can select individual photos or select to open the month sections to view all photos in that folder. The program allow you the ability to edit your photos by cropping or rotating them and saving your changes. In future builds I plan to add additional access to photos in social media and then allow you to create a collage of your photos you.</p>
                                 <h5><a href="http://apps.microsoft.com/windows/en-us/app/social-photo-collage/3c1cc686-5037-451d-80d7-ce232bc374a4">Link: Social Photo Collage</a></h5>
+                                <p></p>
                                 <ul>
                                     <li>View photos from My Photos folder</li>
                                     <li>Organize photos by date created</li>
@@ -640,6 +648,94 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="span4">
+                    <h3>Integration and Unit testing</h3>
+                </div>
+                <div class="span8">
+                    <div class="row-fluid">
+                        <ul class="thumbnails thumbnails-portfolio">
+                            <li class="span6">
+                                <a href="" class="thumbnail">
+                                    <img src="/images/JUnit_Testing_Code_thumb.png" width="421" height="237" alt="portfolio">
+                                    <div class="hover"></div>
+                                    <div class="info">
+                                        <h5>Integration and Unit testing</h5>
+                                        <p>2013</p>
+                                    </div>
+                                </a>
+                                <div class="page">
+                                    <img src="/images/JUnitTestingCode.png" width="1920" height="1080" alt="portfolio">
+                                </div>
+                            </li>
+                            <li class="span6">
+                                <p>During an 8 week term at Oregon Tech I designed, developed, and published a HTML5|JavaScript Windows 8 app to the Windows Store. This was a great accomplishment for me considering I was very green with programing in JavaScript and had to learn the syntax during the process. I am looking forward to continued work improving and expanding the features of this application.</p>
+                                <h5>Description</h5>
+                                <p>In my Software System Testing course I was provided code that someone else has written (poorly) and fixed it through testing. I started by familiarizing myself with the application and interfaces, then wrote unit tests utilizing fixtures, doubles, mocks, and stubs to isolate testing in JUnit. When errors were identified through the tests I corrected the code errors.</p>
+                                <p>After completing the unit tests I then wrote integration test that test the flow and interconnections between the modules.  When errors were identified through the tests I corrected the code errors.</p>
+                                <h5><a href="https://github.com/ChaseMarcum/JUnitTestingCode">Git Repository Link: JUnitTestingCode</a></h5>
+                                
+                                <p>Systems Utilized</p>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>JUnit</li>
+                                    <li>Mockito</li>
+                                    <li>Eclipse</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>Code Example:</p>
+                        <pre class="brush: java;">public class LibraryHttpServiceTest {
+	private LibraryHttpService sut;
+	private IWebClient mockClient;
+	private IBookParser mockBookParser;
+	private ILibraryParser mockLibraryParser;
+	
+	@Before
+	public void setup() throws ConnectionException, ParseException {
+		mockClient = Mockito.mock(IWebClient.class);
+		mockLibraryParser = Mockito.mock(ILibraryParser.class);
+		mockBookParser = Mockito.mock(IBookParser.class);
+		sut = new LibraryHttpService(mockClient);
+		sut.setBookParser(mockBookParser);
+		sut.setLibraryParser(mockLibraryParser);
+	}
+	
+	@Test
+	public void testSetBookParser_IllegalArgumentException() throws IllegalArgumentException{
+		sut.setBookParser(null);
+	}
+	
+	@Test
+	public void testSetLibraryParser_IllegalArgumentException() throws IllegalArgumentException{
+		sut.setLibraryParser(null);
+	}
+	
+	@Test
+	public void testClientSetter_WithGetter() throws ConnectionException
+	{
+		class LibraryHttpServiceExtra extends LibraryHttpService
+		{			
+			public LibraryHttpServiceExtra(IWebClient client) throws ConnectionException { mockClient = client; }
+		}				 
+		LibraryHttpServiceExtra newLibService = new LibraryHttpServiceExtra(mockClient);
+		IWebClient anotherClient = Mockito.mock(IWebClient.class);		
+		newLibService.setWebClient(anotherClient);
+	}
+	
+	@Test
+	public void testGetLibrary() throws InvalidRequestException, ConnectionException, ParseException {
+		ILibrary mockLibrary = Mockito.mock(ILibrary.class);
+		Mockito.when(mockClient.query("http://www.fake.com/library/123")).thenReturn("goodjson");
+		Mockito.when(mockLibraryParser.parseLibrary("goodjson")).thenReturn(mockLibrary);
+		
+		ILibrary library = sut.getLibrary("123");
+		Assert.assertEquals(mockLibrary, library);
+	}
+                                </pre>
+                    </div>
+                </div>
+
             </div>
         </section>
 
